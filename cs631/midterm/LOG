@@ -1,0 +1,11 @@
+commit e7aab5207c3923bdebeada55ac87342d291c0dd6
+Author: Nguyen Hoai Vy <nguyenhoaivy@example.com>
+Date:   Thu Oct 8 19:07:02 2026 +0000
+
+    Add LOG file
+
+commit 474f4d0e20c3136b3d802e7e838e1346adfb0fac
+Author: Nguyen Hoai Vy <nguyenhoaivy@example.com>
+Date:   Thu Oct 8 19:06:55 2026 +0000
+
+    Complete midterm ls(1) implementation

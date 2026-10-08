@@ -1,0 +1,24 @@
+# CS631 Midterm - ls(1) Implementation
+
+## Architecture
+- `ls.h`: Common data structures, flag definitions, and function declarations.
+- `ls.c`: Argument parsing (`getopt`), directory opening/reading (`opendir`/`readdir`), and recursive traversal (`-R`).
+- `cmp.c`: Comparison functions used with `qsort` for sorting options (`-t`, `-S`, `-c`, `-u`, `-r`).
+- `print.c`: Formatting and printing output for regular listing, long format (`-l`), numeric IDs (`-n`), inode (`-i`), blocks (`-s`), and suffixes (`-F`).
+- `util.c`: File mode conversion (`strmode`) and human-readable byte size calculations (`-h`).
+
+## Testing Procedure
+1. Compared output against standard system ls:
+   - `./ls -la` vs `/bin/ls -la`
+   - `./ls -lF` vs `/bin/ls -lF`
+   - `./ls -lh` vs `/bin/ls -lh`
+2. Sorting tests:
+   - Tested size sorting: `./ls -lS`
+   - Tested time sorting: `./ls -lt`, `./ls -lu`, `./ls -lc`
+   - Tested reverse sorting: `./ls -lr`
+3. Tested recursive traversal:
+   - `./ls -R /usr/include`
+4. Special files testing:
+   - `./ls -l /dev` to verify major/minor device numbers display.
+5. Exit status checks:
+   - Tested `./ls non_existent_file` to ensure it outputs error and returns > 0.

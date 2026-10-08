@@ -1,0 +1,8 @@
+[x] Split code into multiple source files (ls.c, cmp.c, print.c, util.c, ls.h)
+[x] Makefile provided with -Wall and -Werror
+[x] Flags supported: -A, -a, -c, -d, -F, -f, -h, -i, -k, -l, -n, -q, -R, -r, -S, -s, -t, -u, -w
+[x] Non-directory operands displayed first, followed by directories
+[x] Sorting implemented with qsort
+[x] Symbolic links display target when -l is specified
+[x] Device special files display major and minor device numbers
+[x] Non-zero exit status on error
